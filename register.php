@@ -8,6 +8,8 @@
 		$passwordconfirm = trim($_POST['password-confirm']);
 
 		echo $username, $email, $password, $passwordconfirm;
+
+		//if(!$password < &&)
 	}
 
  ?>
