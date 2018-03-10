@@ -19,9 +19,14 @@
 
 							if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 
-								dbConnect::query('INSERT INTO users VALUES(null, :username, :password, :email, null)', array(':username'=>$username, ':password'=>password_hash($password, PASSWORD_BCRYPT), ':email'=>$email));
-								echo "Success";
+								if(!dbConnect::query('SELECT email from users WHERE email=:email', array(':email'=>$email))){
 
+									dbConnect::query('INSERT INTO users VALUES(null, :username, :password, :email, null)', array(':username'=>$username, ':password'=>password_hash($password, PASSWORD_BCRYPT), ':email'=>$email));
+									echo "Success";
+									
+								}else{
+									echo "E-mail in use";
+								}
 							}else{
 								echo "Invalid email!";
 							}

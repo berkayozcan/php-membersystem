@@ -17,6 +17,8 @@
 				dbConnect::query('INSERT INTO login_tokens VALUES(null, :token, :userID)', array(':token'=>sha1($token), ':userID'=>$user_id));
 
 				setcookie("COID", $token, time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);
+				setcookie("COID_", '1', time() + 60 * 60 * 24 * 3, '/', NULL, NULL, TRUE);
+
 
 			}else{
 				echo "Incorrect password";
