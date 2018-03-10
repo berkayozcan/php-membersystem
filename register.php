@@ -23,7 +23,7 @@
 
 									dbConnect::query('INSERT INTO users VALUES(null, :username, :password, :email, null)', array(':username'=>$username, ':password'=>password_hash($password, PASSWORD_BCRYPT), ':email'=>$email));
 									echo "Success";
-									
+
 								}else{
 									echo "E-mail in use";
 								}
