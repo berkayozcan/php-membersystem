@@ -61,7 +61,7 @@
 		<input type="text" name="username" placeholder="Username..."></br>
 		<input type="email" name="email" placeholder="E-Mail..."></br>
 		<input type="password" name="password" placeholder="Password..."></br>
-		<input type="password" name="password-confirm" value="Register" placeholder="Password Confirm..."></br>
+		<input type="password" name="password-confirm" placeholder="Password Confirm..."></br>
 		<input type="submit" name="register" value="Register">
 	</form>
 </body>
