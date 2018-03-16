@@ -8,7 +8,7 @@
 
 	if(isset($_POST['confirm'])){
 		if(isset($_POST['alldevices'])){
-							dbConnect::query('DELETE FROM login_tokens WHERE userID=:userid', array(':userID'=>Login::isLoggedIn()));
+				dbConnect::query('DELETE FROM login_tokens WHERE userID=:userid', array(':userid'=>Login::isLoggedIn()));
 
 
 		}else{
